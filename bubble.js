@@ -2,9 +2,6 @@
 // Released under the ISC license.
 // https://observablehq.com/@d3/bubble-chart
 
-files = d3.csv("Vehicles.csv", function(data) {
-    console.log(data);
-});
 
   function BubbleChart(data, {
     name = ([x]) => x,
@@ -106,7 +103,10 @@ files = d3.csv("Vehicles.csv", function(data) {
   }
 
   function init(){
-    BubbleChart(files, {
+    d3.csv("Vehicles.csv", function(data) {
+        console.log(data);
+    });
+    BubbleChart(data, {
         label: d => d['MODEL'],
         value: d => d['VALUE'],
         group: d => d['VEHICLE_TYPE'],
