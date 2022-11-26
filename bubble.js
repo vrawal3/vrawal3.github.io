@@ -2,6 +2,6 @@
 // Released under the ISC license.
 // https://observablehq.com/@d3/bubble-chart
 
-const vehicles = './Vehicles.csv'
-var data = $.csv.toObjects(vehicles);
-console.log(data)
+window.onload = d3.csv("Vehicles.csv", function(data) {
+    console.log(data);
+});
