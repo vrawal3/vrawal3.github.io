@@ -7,9 +7,9 @@
 // });
 
 
-window.onload = d3.csv("Vehicles.csv", function(data) {
-    console.log(data);
-});
+// window.onload = d3.csv("Vehicles.csv", function(data) {
+//     console.log(data);
+// });
 
 function BubbleChart(data, {
     name = ([x]) => x,
