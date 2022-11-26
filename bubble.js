@@ -6,14 +6,6 @@ files = d3.csv("Vehicles.csv", function(data) {
     console.log(data);
 });
 
-chart = BubbleChart(files, {
-    label: d => d['MODEL'],
-    value: d => d['VALUE'],
-    group: d => d['VEHICLE_TYPE'],
-    title: d => d['TITLE'],
-    width: 850
-  })
-
   function BubbleChart(data, {
     name = ([x]) => x,
     label = name, // The label printed on the bubbles
@@ -112,3 +104,15 @@ chart = BubbleChart(files, {
   
     return Object.assign(svg.node(), {scales: {color}});
   }
+
+  function init(){
+    BubbleChart(files, {
+        label: d => d['MODEL'],
+        value: d => d['VALUE'],
+        group: d => d['VEHICLE_TYPE'],
+        title: d => d['TITLE'],
+        width: 850
+      })
+}
+
+window.onload = init;
