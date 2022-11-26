@@ -104,15 +104,14 @@
 
   function init(){
     d3.csv("Vehicles.csv", function(data) {
-        console.log(data);
+        BubbleChart(data, {
+            label: d => d['MODEL'],
+            value: d => d['VALUE'],
+            group: d => d['VEHICLE_TYPE'],
+            title: d => d['TITLE'],
+            width: 850
+          })
     });
-    BubbleChart(data, {
-        label: d => d['MODEL'],
-        value: d => d['VALUE'],
-        group: d => d['VEHICLE_TYPE'],
-        title: d => d['TITLE'],
-        width: 850
-      })
 }
 
 window.onload = init;
