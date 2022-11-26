@@ -87,9 +87,9 @@ function createMap() {
 }
 
 
-function init(){
-    createMap();
-    createBarChart();
-}
+// function init(){
+//     createMap();
+//     createBarChart();
+// }
 
-window.onload = init;
+// window.onload = init;
