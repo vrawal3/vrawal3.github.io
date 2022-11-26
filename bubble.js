@@ -2,8 +2,8 @@
 // Released under the ISC license.
 // https://observablehq.com/@d3/bubble-chart
 
-d3.csv("Vehicles.csv", function(files) {
-    console.log(files);
+files = d3.csv("Vehicles.csv", function(data) {
+    console.log(data);
 });
 
 chart = BubbleChart(files, {
