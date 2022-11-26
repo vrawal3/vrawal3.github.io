@@ -113,4 +113,4 @@ function BubbleChart(data, {
     return Object.assign(svg.node(), {scales: {color}});
   }
 
-  window.onload = chart
+  window.onload = files
