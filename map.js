@@ -15,7 +15,7 @@ function createMap() {
             color: 'red',
             fillColor: '#f03',
             fillOpacity: 0.5,
-            radius: coords[i][3]
+            radius: coords[i][3]/10
         })
         // .bindPopup(coordinates[i][0])
         .addTo(map);
