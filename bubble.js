@@ -104,7 +104,7 @@
 
   function init(){
     d3.csv("Vehicles.csv", function(data) {
-        BubbleChart(data.keys, {
+        BubbleChart(Object.keys(data), {
             label: d => d['MODEL'],
             value: d => d['VALUE'],
             group: d => d['VEHICLE_TYPE'],
