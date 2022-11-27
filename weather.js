@@ -50,38 +50,39 @@ function bar1() {
     .range([ height, 0]);
     var yAxis = svg.append("g")
     .attr("class", "myYaxis")
-    updateBar1(data1)
-}
 
-function updateBar1(data) {
-    // Update the X axis
-    x.domain(data.map(function(d) { return d.group; }))
-    xAxis.call(d3.axisBottom(x))
-    
-    // Update the Y axis
-    y.domain([0, d3.max(data, function(d) { return d.value }) ]);
-    yAxis.transition().duration(1000).call(d3.axisLeft(y));
-    
-    // Create the u variable
-    var u = svg.selectAll("rect")
-        .data(data)
-    
-    u
-        .enter()
-        .append("rect") // Add a new rect for each new elements
-        .merge(u) // get the already existing elements as well
-        .transition() // and apply changes to all of them
-        .duration(1000)
-        .attr("x", function(d) { return x(d.group); })
-        .attr("y", function(d) { return y(d.value); })
-        .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height - y(d.value); })
-        .attr("fill", "#69b3a2")
-    
-    // If less group in the new dataset, I delete the ones not in use anymore
-    u
-        .exit()
-        .remove()
+    function updateBar1(data) {
+        // Update the X axis
+        x.domain(data.map(function(d) { return d.group; }))
+        xAxis.call(d3.axisBottom(x))
+        
+        // Update the Y axis
+        y.domain([0, d3.max(data, function(d) { return d.value }) ]);
+        yAxis.transition().duration(1000).call(d3.axisLeft(y));
+        
+        // Create the u variable
+        var u = svg.selectAll("rect")
+            .data(data)
+        
+        u
+            .enter()
+            .append("rect") // Add a new rect for each new elements
+            .merge(u) // get the already existing elements as well
+            .transition() // and apply changes to all of them
+            .duration(1000)
+            .attr("x", function(d) { return x(d.group); })
+            .attr("y", function(d) { return y(d.value); })
+            .attr("width", x.bandwidth())
+            .attr("height", function(d) { return height - y(d.value); })
+            .attr("fill", "#69b3a2")
+        
+        // If less group in the new dataset, I delete the ones not in use anymore
+        u
+            .exit()
+            .remove()
+    }
+
+    updateBar1(data1)
 }
 
 function bar2() {
@@ -137,38 +138,38 @@ function bar2() {
     var yAxis = svg.append("g")
     .attr("class", "myYaxis")
 
-    updateBar2(data1)
-}
+    function updateBar2(data) {
+        // Update the X axis
+        x.domain(data.map(function(d) { return d.group; }))
+        xAxis.call(d3.axisBottom(x))
+        
+        // Update the Y axis
+        y.domain([0, d3.max(data, function(d) { return d.value }) ]);
+        yAxis.transition().duration(1000).call(d3.axisLeft(y));
+        
+        // Create the u variable
+        var u = svg.selectAll("rect")
+            .data(data)
+        
+        u
+            .enter()
+            .append("rect") // Add a new rect for each new elements
+            .merge(u) // get the already existing elements as well
+            .transition() // and apply changes to all of them
+            .duration(1000)
+            .attr("x", function(d) { return x(d.group); })
+            .attr("y", function(d) { return y(d.value); })
+            .attr("width", x.bandwidth())
+            .attr("height", function(d) { return height - y(d.value); })
+            .attr("fill", "#69b3a2")
+        
+        // If less group in the new dataset, I delete the ones not in use anymore
+        u
+            .exit()
+            .remove()
+    }
 
-function updateBar2(data) {
-    // Update the X axis
-    x.domain(data.map(function(d) { return d.group; }))
-    xAxis.call(d3.axisBottom(x))
-    
-    // Update the Y axis
-    y.domain([0, d3.max(data, function(d) { return d.value }) ]);
-    yAxis.transition().duration(1000).call(d3.axisLeft(y));
-    
-    // Create the u variable
-    var u = svg.selectAll("rect")
-        .data(data)
-    
-    u
-        .enter()
-        .append("rect") // Add a new rect for each new elements
-        .merge(u) // get the already existing elements as well
-        .transition() // and apply changes to all of them
-        .duration(1000)
-        .attr("x", function(d) { return x(d.group); })
-        .attr("y", function(d) { return y(d.value); })
-        .attr("width", x.bandwidth())
-        .attr("height", function(d) { return height - y(d.value); })
-        .attr("fill", "#69b3a2")
-    
-    // If less group in the new dataset, I delete the ones not in use anymore
-    u
-        .exit()
-        .remove()
+    updateBar2(data1)
 }
 
 function update(data) {
