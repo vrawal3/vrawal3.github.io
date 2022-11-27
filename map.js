@@ -18,7 +18,7 @@ function createMap() {
             radius: coords[i][3]/6
         })
         .addTo(map);
-        circle.bindPopup(coordinates[i][0]);
+        circle.bindPopup(coords[i][0]);
     }
 }
 
