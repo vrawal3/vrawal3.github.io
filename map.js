@@ -11,14 +11,14 @@ function createMap() {
 
     
     for (var i = 0; i < coords.length; i++) {
-        marker = L.circle([coords[i][1], coords[i][2]], {
+        circle = L.circle([coords[i][1], coords[i][2]], {
             color: 'red',
             fillColor: '#f03',
             fillOpacity: 0.5,
             radius: coords[i][3]/6
         })
-        .addTo(map)
-        .bindPopup(coordinates[i][0]);
+        .addTo(map);
+        circle.bindPopup(coordinates[i][0]);
     }
 }
 
