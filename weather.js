@@ -1,28 +1,29 @@
+var data1 = [
+    {group: "5", value: 4},
+    {group: "6", value: 16},
+    {group: "7", value: 8},
+];
+
+var data2 = [
+    {group: "8", value: 7},
+    {group: "9", value: 1},
+    {group: "10", value: 20},
+];
+
+var data3 = [
+    {group: "11", value: 10},
+    {group: "12", value: 4},
+    {group: "1", value: 14},
+];
+
+var data4 = [
+    {group: "2", value: 7},
+    {group: "3", value: 14},
+    {group: "4", value: 9},
+];
+
 function bar1() {
     // create 2 data_set
-    var data1 = [
-        {group: "5", value: 4},
-        {group: "6", value: 16},
-        {group: "7", value: 8},
-    ];
-    
-    var data2 = [
-        {group: "8", value: 7},
-        {group: "9", value: 1},
-        {group: "10", value: 20},
-    ];
-    
-    var data3 = [
-        {group: "11", value: 10},
-        {group: "12", value: 4},
-        {group: "1", value: 14},
-    ];
-
-    var data4 = [
-        {group: "2", value: 7},
-        {group: "3", value: 14},
-        {group: "4", value: 9},
-    ];
     
     // set the dimensions and margins of the graph
     var margin = {top: 30, right: 30, bottom: 70, left: 60},
