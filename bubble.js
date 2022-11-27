@@ -57,7 +57,7 @@
       .join("a")
         .attr("xlink:href", link == null ? null : (d, i) => link(D[d.data], i, data))
         .attr("target", link == null ? null : linkTarget)
-        .attr("transform", d => `translate(${d.x},${d.y})`);
+        .attr("transform", d => `translate([${d.x},${d.y}])`);
   
     // Inserting title for the bubble chart
     svg.append("text")
@@ -104,7 +104,7 @@
 
   function init(){
     d3.csv("Vehicles.csv", function(data) {
-        BubbleChart(Object.keys(data), {
+        BubbleChart(Object.entries(data), {
             label: d => d['MODEL'],
             value: d => d['VALUE'],
             group: d => d['VEHICLE_TYPE'],
