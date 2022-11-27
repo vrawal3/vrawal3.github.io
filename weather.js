@@ -180,3 +180,5 @@ function init() {
     bar1();
     bar2();
 }
+
+window.onload = init;
