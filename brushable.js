@@ -1,4 +1,3 @@
-var ageData = FileAttachment("sex@1.csv").csv({typed: true})
 var aData = ageData.map(d => ({
     age: d['AGE'],
     sex: d['SEX'],
