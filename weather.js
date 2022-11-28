@@ -1,6 +1,6 @@
 var data1 = [
     {group: "5", value: 4},
-    {group: "6", value: 16},
+    {group: "6", value: 160},
     {group: "7", value: 8},
 ];
 
