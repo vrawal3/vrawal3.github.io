@@ -93,25 +93,25 @@ function updateBar1(data) {
 }
 
 var data11 = [
-    {group: "CLEAR", value: 29256},
+    {group: "CLEAR", value: 500},
     {group: "CLOUDY/OVERCAST", value: 566},
     {group: "FOG/SMOKE/HAZE", value: 8},
 ];
 
 var data22 = [
-    {group: "CLEAR", value: 13572},
+    {group: "CLEAR", value: 600},
     {group: "CLOUDY/OVERCAST", value: 585},
     {group: "FOG/SMOKE/HAZE", value: 9},
 ];
 
 var data33 = [
-    {group: "CLEAR", value: 16156},
+    {group: "CLEAR", value: 300},
     {group: "CLOUDY/OVERCAST", value: 887},
     {group: "FOG/SMOKE/HAZE", value: 50},
 ];
 
 var data44 = [
-    {group: "CLEAR", value: 20980},
+    {group: "CLEAR", value: 200},
     {group: "CLOUDY/OVERCAST", value: 781},
     {group: "FOG/SMOKE/HAZE", value: 23},
 ];
