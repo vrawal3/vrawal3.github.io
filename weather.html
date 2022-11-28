@@ -7,21 +7,40 @@
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="weather.js"></script>
-
+    
+    <style>
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+        h3 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        button {text-align: center;}
+        .parent {
+            margin: 1rem;
+            padding: 2rem 2rem;
+            text-align: center;
+        }
+        .child {
+            display: inline-block;
+            padding: 1rem 1rem;
+            vertical-align: middle;
+        }
+    </style>
 
 </head>
 <body>
-    <h1>Chicago Crashes Map</h1>
-    <ul>
-        <li><a href="index.html">Home Page</a></li>
-    </ul>
+    <h1>Chicago Crashes by Seasons</h1>
+    <h3><a href="index.html">Home Page</a></h3>
     <button onclick="update(data1)">Summer</button>
     <button onclick="update(data2)">Fall</button>
     <button onclick="update(data3)">Winter</button>
     <button onclick="update(data4)">Spring</button>
 
-    <div id="my_dataviz"></div>
-    <div id="my_dataviz1"></div>
+    <div class='parent'>
+        <div class='child'><div id="my_dataviz"></div></div>
+        <div class='child'><div id="my_dataviz1"></div></div>
+    </div>      
+
 </body>
 
 </html>
