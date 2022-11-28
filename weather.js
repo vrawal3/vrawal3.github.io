@@ -84,10 +84,10 @@ function bar1() {
     }
 
     updateBar1(data1)
-}
-
-function update(data) {
-    updateBar1(data);
+    
+    function update(data) {
+        updateBar1(data);
+    }
 }
 
 function init() {
