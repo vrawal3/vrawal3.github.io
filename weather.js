@@ -29,37 +29,6 @@ var yAxis;
 var svg;
 var height;
 
-var data11 = [
-    {group: "5", value: 4},
-    {group: "6", value: 16},
-    {group: "7", value: 8},
-];
-
-var data22 = [
-    {group: "8", value: 7},
-    {group: "9", value: 1},
-    {group: "10", value: 20},
-];
-
-var data33 = [
-    {group: "11", value: 10},
-    {group: "12", value: 4},
-    {group: "1", value: 14},
-];
-
-var data44 = [
-    {group: "2", value: 7},
-    {group: "3", value: 14},
-    {group: "4", value: 9},
-];
-
-var x1;
-var y1;
-var xAxis1;
-var yAxis1;
-var svg1;
-var height1;
-
 function bar1() {
     // create 2 data_set
     
@@ -122,6 +91,37 @@ function updateBar1(data) {
         .exit()
         .remove()
 }
+
+var data11 = [
+    {group: "5", value: 4},
+    {group: "6", value: 16},
+    {group: "7", value: 8},
+];
+
+var data22 = [
+    {group: "8", value: 7},
+    {group: "9", value: 1},
+    {group: "10", value: 20},
+];
+
+var data33 = [
+    {group: "11", value: 10},
+    {group: "12", value: 4},
+    {group: "1", value: 14},
+];
+
+var data44 = [
+    {group: "2", value: 7},
+    {group: "3", value: 14},
+    {group: "4", value: 9},
+];
+
+var x1;
+var y1;
+var xAxis1;
+var yAxis1;
+var svg1;
+var height1;
 
 function bar2() {
     // create 2 data_set
