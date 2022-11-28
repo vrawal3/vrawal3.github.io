@@ -991,12 +991,6 @@ var ageData = [
   }
  ]
 
-// var aData = ageData.map(d => ({
-//     age: d['AGE'],
-//     sex: d['SEX'],
-//     ageFreq: d['AGE_FREQUENCY']
-//   }))
-
 var margin = ({top: 10, right: 20, bottom: 50, left: 105});
 
 var visWidth = 400;
