@@ -1193,8 +1193,8 @@ function barChart() {
     
     const originCounts = d3.rollup(
       data,
-      group => d3.sum(group, d => d.ageFreq),
-      d => d.sex
+      group => d3.sum(group, d => d.AGE_FREQUENCY),
+      d => d.SEX
     );
 
     // update x scale
