@@ -1233,7 +1233,7 @@ function init() {
       bar.update(scatter.value);
     });
 
-    bar.update(scatter.value);
+    bar.update(ageData);
   }
 
 window.onload = init;
