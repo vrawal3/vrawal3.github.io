@@ -991,23 +991,23 @@ var ageData = [
   }
  ]
 
-var aData = ageData.map(d => ({
-    age: d['AGE'],
-    sex: d['SEX'],
-    ageFreq: d['AGE_FREQUENCY']
-  }))
+// var aData = ageData.map(d => ({
+//     age: d['AGE'],
+//     sex: d['SEX'],
+//     ageFreq: d['AGE_FREQUENCY']
+//   }))
 
 var margin = ({top: 10, right: 20, bottom: 50, left: 105});
 
 var visWidth = 400;
 var visHeight = 400;
-var sex = Array.from(new Set(aData.map(d => d.sex)));
+var sex = Array.from(new Set(ageData.map(d => d.SEX)));
 var barColor = d3.scaleOrdinal().domain(sex).range(d3.schemeCategory10);
 var x = d3.scaleLinear()
-        .domain(d3.extent(aData, d => d.age)).nice()
+        .domain(d3.extent(ageData, d => d.AGE)).nice()
         .range([0, visWidth])
 var y = d3.scaleLinear()
-        .domain(d3.extent(aData, d => d.ageFreq)).nice()
+        .domain(d3.extent(ageData, d => d.AGE_FREQUENCY)).nice()
         .range([visHeight, 0])
 
 var xAxis = (g, scale, label) =>
@@ -1055,7 +1055,7 @@ function brushableScatterplot() {
   // set up
 
   // the value for when there is no brush
-  const initialValue = aData;
+  const initialValue = ageData;
 
   const svg = d3.select('#scatterPlot')
       .append("svg")
@@ -1082,11 +1082,11 @@ function brushableScatterplot() {
   const radius = 3;
   
   const dots = g.selectAll('circle')
-    .data(aData)
+    .data(ageData)
     .join('circle')
-      .attr('cx', d => x(d.age))
-      .attr('cy', d => y(d.ageFreq))
-      .attr('fill', d =>  barColor(d.sex))
+      .attr('cx', d => x(d.AGE))
+      .attr('cy', d => y(d.AGE_FREQUENCY))
+      .attr('fill', d =>  barColor(d.SEX))
       .attr('opacity', 1)
       .attr('r', radius);
   
@@ -1109,8 +1109,8 @@ function brushableScatterplot() {
     
     // return true if the dot is in the brush box, false otherwise
     function isBrushed(d) {
-      const cx = x(d.age);
-      const cy = y(d.ageFreq)
+      const cx = x(d.AGE);
+      const cy = y(d.AGE_FREQUENCY)
       return cx >= x1 && cx <= x2 && cy >= y1 && cy <= y2;
     } 
     
@@ -1118,14 +1118,14 @@ function brushableScatterplot() {
     dots.attr('fill', d => isBrushed(d) ? barColor(d.origin) : 'gray');
     
     // update the data that appears in the cars variable
-    svg.property('value', aData.filter(isBrushed)).dispatch('input');
+    svg.property('value', ageData.filter(isBrushed)).dispatch('input');
   }
   
   function onEnd(event) {
     // if the brush is cleared
     if (event.selection === null) {
       // reset the color of all of the dots
-      dots.attr('fill', d => barColor(d.sex));
+      dots.attr('fill', d => barColor(d.SEX));
       svg.property('value', initialValue).dispatch('input');
     }
   }
