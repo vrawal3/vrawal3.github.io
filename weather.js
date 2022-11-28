@@ -93,27 +93,31 @@ function updateBar1(data) {
 }
 
 var data11 = [
-    {group: "5", value: 4},
-    {group: "6", value: 16},
-    {group: "7", value: 8},
+    {group: "CLEAR", value: 29256},
+    {group: "CLOUDY/OVERCAST", value: 566},
+    {group: "FOG/SMOKE/HAZE", value: 8},
+    {group: "FREEZING RAIN/DRIZZLE", value: 15},
 ];
 
 var data22 = [
-    {group: "8", value: 7},
-    {group: "9", value: 1},
-    {group: "10", value: 20},
+    {group: "CLEAR", value: 13572},
+    {group: "CLOUDY/OVERCAST", value: 585},
+    {group: "FOG/SMOKE/HAZE", value: 9},
+    {group: "FREEZING RAIN/DRIZZLE", value: 38},
 ];
 
 var data33 = [
-    {group: "11", value: 10},
-    {group: "12", value: 4},
-    {group: "1", value: 14},
+    {group: "CLEAR", value: 16156},
+    {group: "CLOUDY/OVERCAST", value: 887},
+    {group: "FOG/SMOKE/HAZE", value: 50},
+    {group: "FREEZING RAIN/DRIZZLE", value: 170},
 ];
 
 var data44 = [
-    {group: "2", value: 7},
-    {group: "3", value: 14},
-    {group: "4", value: 9},
+    {group: "CLEAR", value: 20980},
+    {group: "CLOUDY/OVERCAST", value: 781},
+    {group: "FOG/SMOKE/HAZE", value: 23},
+    {group: "FREEZING RAIN/DRIZZLE", value: 29},
 ];
 
 var x1;
@@ -186,9 +190,9 @@ function updateBar2(data) {
         .remove()
 }
 
-function update(data) {
-    updateBar1(data);
-    updateBar2(data);
+function update(data1, data2) {
+    updateBar1(data1);
+    updateBar2(data2);
 }
 
 function init() {
