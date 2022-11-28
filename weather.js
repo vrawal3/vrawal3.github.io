@@ -27,6 +27,7 @@ var y;
 var xAxis;
 var yAxis;
 var svg;
+var height;
 
 function bar1() {
     // create 2 data_set
