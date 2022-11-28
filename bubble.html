@@ -7,13 +7,30 @@
     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js" integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="bubble.js"></script>
-
+    
+    <style>
+        h1 {text-align: center;}
+        h2 {text-align: center;}
+        h3 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+        img {text-align: center;}
+        .parent {
+            margin: 1rem;
+            padding: 2rem 2rem;
+            text-align: center;
+        }
+        .child {
+            display: inline-block;
+            padding: 1rem 1rem;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
-    <h1>brushable</h1>
-    <ul>
-        <li><a href="index.html">Home Page</a></li>
-    </ul>
+    <h1>Vehicle Type Crash Frequency</h1>
+    <h3><a href="index.html">Home Page</a></h3>
+
     <img src="swatches.png" alt="Legend">
     <div id="bubble"></div>
 </body>
