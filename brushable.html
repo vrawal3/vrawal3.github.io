@@ -9,6 +9,19 @@
     <script src="brushable.js"></script>
     <script src="brushableData.js"></script>
 
+    <style>
+        .parent {
+            margin: 1rem;
+            padding: 2rem 2rem;
+            text-align: center;
+        }
+        .child {
+            display: inline-block;
+            padding: 1rem 1rem;
+            vertical-align: middle;
+        }
+    </style>
+
 </head>
 <body>
     <h1>brushable</h1>
@@ -16,8 +29,10 @@
         <li><a href="index.html">Home Page</a></li>
     </ul>
 
-    <div id="scatterPlot"></div>
-    <div id="barChart"></div>
+    <div class='parent'>
+        <div class='child'><div id="scatterPlot"></div></div>
+        <div class='child'><div id="barChart"></div></div>
+    </div>
 </body>
 
 </html>
