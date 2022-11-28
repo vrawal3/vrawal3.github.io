@@ -31,10 +31,15 @@
 <body>
     <h1>Chicago Crashes by Seasons</h1>
     <h3><a href="index.html">Home Page</a></h3>
-    <button onclick="update(data1)">Summer</button>
-    <button onclick="update(data2)">Fall</button>
+    
+   
     <button onclick="update(data3)">Winter</button>
     <button onclick="update(data4)">Spring</button>
+
+    <div class='parent'>
+        <div class='child'><button onclick="update(data1)">Summer</button></div>
+        <div class='child'><button onclick="update(data2)">Fall</button></div>
+    </div>
 
     <div class='parent'>
         <div class='child'><div id="my_dataviz"></div></div>
