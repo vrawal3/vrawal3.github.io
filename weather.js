@@ -96,28 +96,24 @@ var data11 = [
     {group: "CLEAR", value: 29256},
     {group: "CLOUDY/OVERCAST", value: 566},
     {group: "FOG/SMOKE/HAZE", value: 8},
-    {group: "FREEZING RAIN/DRIZZLE", value: 15},
 ];
 
 var data22 = [
     {group: "CLEAR", value: 13572},
     {group: "CLOUDY/OVERCAST", value: 585},
     {group: "FOG/SMOKE/HAZE", value: 9},
-    {group: "FREEZING RAIN/DRIZZLE", value: 38},
 ];
 
 var data33 = [
     {group: "CLEAR", value: 16156},
     {group: "CLOUDY/OVERCAST", value: 887},
     {group: "FOG/SMOKE/HAZE", value: 50},
-    {group: "FREEZING RAIN/DRIZZLE", value: 170},
 ];
 
 var data44 = [
     {group: "CLEAR", value: 20980},
     {group: "CLOUDY/OVERCAST", value: 781},
     {group: "FOG/SMOKE/HAZE", value: 23},
-    {group: "FREEZING RAIN/DRIZZLE", value: 29},
 ];
 
 var x1;
