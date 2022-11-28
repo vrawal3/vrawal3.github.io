@@ -1133,8 +1133,107 @@ function brushableScatterplot() {
   return svg.node();
 }
 
+function barChart() {
+  // set up
+  
+  const margin = {top: 10, right: 20, bottom: 50, left: 50};
+  
+  const visWidth = 500;
+  const visHeight = 300;
+
+  const svg = d3.select("#barChart")
+      .append('svg')
+      .attr('width', visWidth + margin.left + margin.right)
+      .attr('height', visHeight + margin.top + margin.bottom + 50);
+
+  const g = svg.append("g")
+      .attr("transform", `translate(${margin.left + 100}, ${margin.top})`);
+
+  svg.append("text")
+     .attr("x", visWidth-230)
+     .attr("y", visHeight+75)
+     .attr("text-anchor", "middle")
+     .style("font-size", "20px")
+     .text("Frequency of Crashes by Sex");
+  
+  // create scales
+  
+  const x = d3.scaleLinear()
+      .range([0, visWidth]);
+  
+  const y = d3.scaleBand()
+      .domain(barColor.domain())
+      .range([0, visHeight])
+      .padding(0.2);
+  
+  // create and add axes
+  
+  const xAxis = d3.axisBottom(x).tickSizeOuter(0);
+  
+  const xAxisGroup = g.append("g")
+      .attr("transform", `translate(0, ${visHeight})`);
+  
+  xAxisGroup.append("text")
+      .attr("x", visWidth / 2)
+      .attr("y", 40)
+      .attr("fill", "black")
+      .attr("text-anchor", "middle")
+      .text("Frequency");
+  
+  const yAxis = d3.axisLeft(y);
+  
+  const yAxisGroup = g.append("g")
+      .call(yAxis)
+      // remove baseline from the axis
+      .call(g => g.select(".domain").remove());
+    
+  let barsGroup = g.append("g");
+
+  function update(data) {
+    
+    const originCounts = d3.rollup(
+      data,
+      group => d3.sum(group, d => d.ageFreq),
+      d => d.sex
+    );
+
+    // update x scale
+    x.domain([0, d3.max(originCounts.values())]).nice()
+
+    // update x axis
+
+    const t = svg.transition()
+        .ease(d3.easeLinear)
+        .duration(200);
+
+    xAxisGroup
+      .transition(t)
+      .call(xAxis);
+    
+    // draw bars
+    barsGroup.selectAll("rect")
+      .data(originCounts, ([origin, count]) => origin)
+      .join("rect")
+        .attr("fill", ([origin, count]) => barColor(origin))
+        .attr("height", y.bandwidth())
+        .attr("x", 0)
+        .attr("y", ([origin, count]) => y(origin))
+      .transition(t)
+        .attr("width", ([origin, count]) => x(count))
+  }
+  
+  return Object.assign(svg.node(), { update });;
+}
+
 function init() {
     const scatter = brushableScatterplot();
+    const bar = barChart();
+
+    d3.select(scatter).on('input', () => {
+      bar.update(scatter.value);
+    });
+
+    bar.update(scatter.value);
   }
 
 window.onload = init;
