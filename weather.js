@@ -145,11 +145,11 @@ function bar2() {
     .range([ 0, width ])
     .padding(0.2);
     xAxis1 = svg1.append("g")
-    .attr("transform", "translate(0," + height + ")")
+    .attr("transform", "translate(0," + height1 + ")")
     
     // Initialize the Y axis
     y1 = d3.scaleLinear()
-    .range([ height, 0]);
+    .range([ height1, 0]);
     yAxis1 = svg1.append("g")
     .attr("class", "myYaxis")
     updateBar2(data11)
