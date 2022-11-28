@@ -1,3 +1,4 @@
+var d3 = require("d3")
 var ageData = [
   {
     "AGE": 1,
