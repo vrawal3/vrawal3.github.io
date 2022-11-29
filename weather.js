@@ -18,6 +18,13 @@ function bar1() {
     .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
+
+    svg.append("text")
+     .attr("x", width/2)
+     .attr("y", padding+40)
+     .attr("text-anchor", "middle")
+     .style("font-size", "10px")
+     .text("Crashes Frequency by Season");
     
     x = d3.scaleBand()
     .range([ 0, width ])
