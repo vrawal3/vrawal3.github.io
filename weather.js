@@ -27,11 +27,18 @@ function bar1() {
     .text("Crashes Frequency by Season");
 
     svg.append("text")
-     .attr("x", width/2)
-     .attr("y", height-450)
-     .attr("text-anchor", "middle")
-     .style("font-size", "20px")
-     .text("Crashes Frequency by Season");
+    .attr("text-anchor", "end")
+    .attr("x", width)
+    .attr("y", height + margin.top + 20)
+    .text("X axis title");
+
+    svg.append("text")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-90)")
+        .attr("y", -margin.left+20)
+        .attr("x", -margin.top)
+        .text("Y axis title")
+
     
     x = d3.scaleBand()
     .range([ 0, width ])
