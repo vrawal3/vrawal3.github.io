@@ -93,27 +93,27 @@ function updateBar1(data) {
 }
 
 var data11 = [
-    {group: "1", value: 1},
-    {group: "2", value: 2},
-    {group: "3", value: 3},
+    {group: "a", value: 1},
+    {group: "b", value: 2},
+    {group: "c", value: 3},
 ];
 
 var data22 = [
-    {group: "1", value: 4},
-    {group: "2", value: 5},
-    {group: "3", value: 6},
+    {group: "a", value: 4},
+    {group: "b", value: 5},
+    {group: "c", value: 6},
 ];
 
 var data33 = [
-    {group: "1", value: 7},
-    {group: "2", value: 8},
-    {group: "3", value: 9},
+    {group: "a", value: 7},
+    {group: "b", value: 8},
+    {group: "c", value: 9},
 ];
 
 var data44 = [
-    {group: "1", value: 10},
-    {group: "2", value: 11},
-    {group: "3", value: 12},
+    {group: "a", value: 10},
+    {group: "b", value: 11},
+    {group: "c", value: 12},
 ];
 
 var x1;
