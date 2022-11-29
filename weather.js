@@ -19,9 +19,9 @@ function bar1() {
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-    svg1.append("text")
+    svg.append("text")
     .attr("x", width/2)
-    .attr("y", height1+50)
+    .attr("y", height+50)
     .attr("text-anchor", "middle")
     .style("font-size", "20px")
     .text("Crashes Frequency by Season");
