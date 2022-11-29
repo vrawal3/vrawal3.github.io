@@ -114,7 +114,7 @@ function updateBar2(data) {
         .attr("y", function(d) { return y1(d.value); })
         .attr("width", x1.bandwidth())
         .attr("height", function(d) { return height1 - y1(d.value); })
-        .attr("fill", "#69b3a2")
+        .attr("fill", "#FAA0A0")
     u
         .exit()
         .remove()
