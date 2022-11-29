@@ -93,27 +93,27 @@ function updateBar1(data) {
 }
 
 var data11 = [
-    {group: "5", value: 10},
-    {group: "6", value: 20},
-    {group: "7", value: 38},
+    {group: "555", value: 10},
+    {group: "666", value: 20},
+    {group: "777", value: 38},
 ];
 
 var data22 = [
-    {group: "8", value: 30},
-    {group: "9", value: 1},
-    {group: "10", value: 40},
+    {group: "888", value: 30},
+    {group: "999", value: 1},
+    {group: "100", value: 40},
 ];
 
 var data33 = [
-    {group: "11", value: 60},
-    {group: "12", value: 40},
-    {group: "1", value: 14},
+    {group: "111", value: 60},
+    {group: "122", value: 40},
+    {group: "111", value: 14},
 ];
 
 var data44 = [
-    {group: "2", value: 70},
-    {group: "3", value: 14},
-    {group: "4", value: 90},
+    {group: "222", value: 70},
+    {group: "333", value: 14},
+    {group: "444", value: 90},
 ];
 
 var x1;
