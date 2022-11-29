@@ -21,7 +21,7 @@ function bar1() {
 
     svg.append("text")
      .attr("x", width/2)
-     .attr("y", height+30)
+     .attr("y", height+40)
      .attr("text-anchor", "middle")
      .style("font-size", "20px")
      .text("Crashes Frequency by Season");
