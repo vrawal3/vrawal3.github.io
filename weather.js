@@ -103,6 +103,13 @@ function bar2() {
         .style("font-size", "20px")
         .text("Crashes Frequency by Weather Conditions");
 
+    svg1.append("text")
+    .attr("text-anchor", "end")
+    .attr("transform", "rotate(-90)")
+    .attr("y", -margin.left+10)
+    .attr("x", -margin.top)
+    .text("Frequency")
+
     x1 = d3.scaleBand()
     .range([ 0, width ])
     .padding(0.2);
