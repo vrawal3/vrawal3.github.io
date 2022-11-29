@@ -29,7 +29,7 @@ function bar1() {
     svg.append("text")
     .attr("text-anchor", "end")
     .attr("transform", "rotate(-90)")
-    .attr("y", -margin.left+30)
+    .attr("y", -margin.left+5)
     .attr("x", -margin.top)
     .text("Frequency")
 
