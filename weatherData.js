@@ -23,25 +23,25 @@ var data4 = [
 ];
 
 var ata1 = [
-    {group: "Clear", value: 29256},
+    {group: "Clear", value: 2925},
     {group: "Overcast", value: 566},
     {group: "Rain/Snow", value: 72},
 ];
 
 var ata2 = [
-    {group: "Clear", value: 13572},
+    {group: "Clear", value: 1357},
     {group: "Overcast", value: 585},
     {group: "Rain/Snow", value: 82},
 ];
 
 var ata3 = [
-    {group: "Clear", value: 16156},
+    {group: "Clear", value: 1615},
     {group: "Overcast", value: 887},
     {group: "Rain/Snow", value: 361},
 ];
 
 var ata4 = [
-    {group: "Clear", value: 20980},
+    {group: "Clear", value: 2098},
     {group: "Overcast", value: 781},
     {group: "Rain/Snow", value: 95},
 ];
