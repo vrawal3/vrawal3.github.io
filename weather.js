@@ -29,7 +29,7 @@ function bar1() {
     svg.append("text")
     .attr("text-anchor", "end")
     .attr("transform", "rotate(-90)")
-    .attr("y", -margin.left-40)
+    .attr("y", -margin.left+20)
     .attr("x", -margin.top)
     .text("Y axis title")
 
