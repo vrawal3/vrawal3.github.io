@@ -21,9 +21,9 @@ function bar1() {
 
     svg.append("text")
      .attr("x", width/2)
-     .attr("y", height)
+     .attr("y", height-50)
      .attr("text-anchor", "middle")
-     .style("font-size", "10px")
+     .style("font-size", "20px")
      .text("Crashes Frequency by Season");
     
     x = d3.scaleBand()
