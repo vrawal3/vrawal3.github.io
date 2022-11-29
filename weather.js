@@ -188,7 +188,7 @@ function updateBar2(data) {
 
 function update(data1, data2) {
     updateBar1(data1);
-    updateBar2(data2);
+    updateBar2(data1);
 }
 
 function init() {
