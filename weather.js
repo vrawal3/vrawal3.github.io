@@ -110,10 +110,10 @@ function updateBar2(data) {
         .merge(u) 
         .transition()
         .duration(1000)
-        .attr("x", function(d) { return x(d.group); })
-        .attr("y", function(d) { return y(d.value); })
+        .attr("x", function(d) { return x1(d.group); })
+        .attr("y", function(d) { return y1(d.value); })
         .attr("width", x1.bandwidth())
-        .attr("height", function(d) { return height1 - y(d.value); })
+        .attr("height", function(d) { return height1 - y1(d.value); })
         .attr("fill", "#69b3a2")
     u
         .exit()
