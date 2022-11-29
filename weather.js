@@ -21,16 +21,17 @@ function bar1() {
 
     svg.append("text")
      .attr("x", width/2)
-     .attr("y", height+50)
+     .attr("y", height+130)
      .attr("text-anchor", "middle")
      .style("font-size", "20px")
      .text("Crashes Frequency by Season");
+
     svg.append("text")
+     .attr("class", "x label")
+     .attr("text-anchor", "end")
      .attr("x", width/2)
-     .attr("y", height+90)
-     .attr("text-anchor", "middle")
-     .style("font-size", "20px")
-     .text("Crashes Frequency by Season");
+     .attr("y", height+80)
+     .text("income per capita, inflation-adjusted (dollars)");
     
     x = d3.scaleBand()
     .range([ 0, width ])
