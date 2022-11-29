@@ -21,17 +21,10 @@ function bar1() {
 
     svg.append("text")
      .attr("x", width/2)
-     .attr("y", height+130)
+     .attr("y", height+50)
      .attr("text-anchor", "middle")
      .style("font-size", "20px")
      .text("Crashes Frequency by Season");
-
-    svg.append("text")
-     .attr("class", "x label")
-     .attr("text-anchor", "end")
-     .attr("x", width/2)
-     .attr("y", height+80)
-     .text("income per capita, inflation-adjusted (dollars)");
     
     x = d3.scaleBand()
     .range([ 0, width ])
@@ -95,6 +88,13 @@ function bar2() {
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
     
+    svg1.append("text")
+        .attr("x", width/2)
+        .attr("y", height1+50)
+        .attr("text-anchor", "middle")
+        .style("font-size", "20px")
+        .text("Crashes Frequency by Weather Conditions");
+
     x1 = d3.scaleBand()
     .range([ 0, width ])
     .padding(0.2);
