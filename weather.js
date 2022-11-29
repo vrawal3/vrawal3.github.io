@@ -152,7 +152,7 @@ function bar2() {
     .range([ height1, 0]);
     yAxis1 = svg1.append("g")
     .attr("class", "myYaxis")
-    updateBar2(data11)
+    // updateBar2(data11)
 }
 
 function updateBar2(data) {
@@ -188,7 +188,7 @@ function updateBar2(data) {
 
 function update(data1, data2) {
     updateBar1(data1);
-    updateBar2(data1);
+    updateBar2(data2);
 }
 
 function init() {
