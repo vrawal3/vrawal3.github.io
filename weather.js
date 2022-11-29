@@ -186,9 +186,9 @@ function updateBar1(data) {
 //         .remove()
 // }
 
-function update(data1, data2) {
-    updateBar1(data1);
-    updateBar2(data2);
+function update(d1, d2) {
+    updateBar1(d1);
+    updateBar2(d2);
 }
 
 function init() {
